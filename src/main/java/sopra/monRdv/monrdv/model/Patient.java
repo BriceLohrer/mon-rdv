@@ -3,10 +3,28 @@ package sopra.monRdv.monrdv.model;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+@Entity
+@DiscriminatorValue("Patient")
 public class Patient extends Personne {
 	
 	private String numeroSS; 
 	private String email; 
+	
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dtNaissance;
 	
 	private ArrayList<RendezVous> rdvs = new ArrayList<RendezVous>(); 
