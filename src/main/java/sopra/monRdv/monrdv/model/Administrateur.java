@@ -1,4 +1,4 @@
-package sopra.allodoc.model;
+package sopra.monRdv.monrdv.model;
 
 public class Administrateur {
 
