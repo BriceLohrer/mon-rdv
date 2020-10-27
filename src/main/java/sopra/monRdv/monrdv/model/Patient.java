@@ -1,4 +1,4 @@
-package sopra.allodoc.model;
+package sopra.monRdv.monrdv.model;
 
 import java.util.ArrayList;
 import java.util.Date;
